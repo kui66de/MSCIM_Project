@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red12\green12\blue12;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c5098\c5098\c5098;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15760\viewh10540\viewkind0
+\deftab720
+\pard\tx220\tx720\pardeftab720\sa160\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 IT Star Phone & Repair Shop is a web application designed to provide an online storefront and repair booking system for a phone shop. The project includes several web pages, a database schema, and PHP scripts to handle various functionalities such as user authentication and product management.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\cf2 \
+
+\b\fs40 Project Structure
+\b0\fs32 \
+The project consists of the following files:\
+\
+index.html: 			The homepage of the website.\
+shop.php: 			The main shop page displaying products.\
+shopping-cart.html: 	The shopping cart page.\
+account.html: 			The user account page for login and registration.\
+appointment.html: 		The appointment booking page for repairs.\
+contact.html: 			The contact page for customer inquiries.\
+shop-single.html: 		The individual product detail page.\
+phone_shop.sql: 		The SQL script for setting up the database.\
+\cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 css folder: 			The style sheet and bootstrap style.\
+js folder: 				The javaScript Library and jQuery for Ajax.\
+php folder: 			The database connection file.\
+threejs folder: 			The JavaScript for webXR and 3D object library.\
+\pard\tx566\pardeftab720\sa160\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+
+\b\fs40 \
+Setup and Configuration
+\b0\fs32 \
+Database Setup\
+1. Create a database named phone_shop.\
+Import the phone_shop.sql file into your database to create the necessary tables and insert initial data.\
+\
+2. Configure Database Connection\
+Open the db_connection.php file (assumed to exist based on the typical structure of PHP projects) and configure it with your database credentials.\
+\
+$servername = "localhost";\
+$username = "your_username";\
+$password = "your_password";\
+$dbname = "phone_shop";\
+\
+3. Configure PHP Scripts\
+Ensure the form actions in account.html point to the correct PHP files (e.g., login.php, register.php).\
+\
+
+\b\fs40 Testing the Features
+\b0\fs32 \
+Register a new account on the account.html page.\
+Log in with the created account.\
+Browse products on the shop.php page.\
+Add products to the cart and view the cart on the shopping-cart.html page.\
+Book a repair appointment on the appointment.html page.\
+Contact the shop via the contact.html page.\
+}

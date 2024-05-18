@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IT Star Phone & Repair Shop</title>
+
+	<!-- responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- master stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Responsive stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/resources/Logo.png" sizes="32x32">
+
+</head>
+<body>
+
+<!--Start mainmenu area-->
+<section class="mainmenu-area stricky">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <!--Start mainmenu-->
+                <nav class="main-menu">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse clearfix">
+                        <ul class="navigation clearfix">
+                            <li style="width: 230px; border: none;"><img
+                                    style="margin-top: 15px; width: 200px; height: 40px"
+                                    src="images/resources/shop_name.png" alt="Logo"></li>
+                            <li class="current"><a href="index.html">Home</a></li>
+                            <li><a href="./shop.php">Products</a></li>
+                            <li><a href="./shopping-cart.html">Cart</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./account.html">Account</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="top-search-box pull-right">
+                <a href="./appointment.html"><button
+                        style="width: auto; padding-left: 6px; padding-right: 6px;">Book a Reapir</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End mainmenu area-->  
+
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area">
+	<div class="container text-center">
+		<h1>Contact</h1>
+	</div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start breadcrumb bottom area-->
+<section class="breadcrumb-botton-area">
+    <div class="container">
+        <div class="left pull-left">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
+                <li>Contact</li>
+            </ul>    
+        </div>
+        <div class="right pull-right">
+            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
+        </div>  
+    </div>
+</section>
+<!--End breadcrumb bottom area-->
+
+<!--Start contact area-->
+<section class="contact-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="contact-info">
+                    <div class="title">
+                        <h2>Contact Details</h2>
+                    </div>
+                    <div class="accordion-box">
+                        <!--Start single accordion box-->
+                        <div class="accordion accordion-block">
+                            <div class="accord-btn active"><h4>Corporate Office</h4></div>
+                            <div class="accord-content collapsed">
+                                <ul class="contact-info-list">
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-home-page"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h5><span>Unit 23D</span><br>Wilton Shopping Center, Co Cork</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-call-answer"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h5><span>Call Us</span><br>+353 087 2397 688</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-envelope"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h5><span>Mail Us</span><br>phonecampus.wilton@gmail.com</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-clock"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h5><span>Opening Time</span><br>Mon - Sat: 09.30am to 18.30pm</h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--End single accordion box-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <div class="title">
+                        <h2>Contact Details</h2>
+                    </div>
+                    <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="form_name" value="" placeholder="Your Name*" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="form_email" value="" placeholder="Your Mail*" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="form_phone" value="" placeholder="Phone">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="form_subject" value="" placeholder="Subject">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea name="form_message" placeholder="Your Message.." required=""></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                                <button class="thm-btn bg-1" type="submit" data-loading-text="Please wait...">send message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End contact area-->
+
+<!--Start Google map area-->
+<section class="google-map-area">
+    <div id="mapCon" style="width: auto; height: 500px; margin: 20px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2462.9096110993296!2d-8.510713323313663!3d51.880862471900706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48448fe5e595180d%3A0x12655bfb3eed5dec!2sIT%20Star%20%7C%20Wliton%20Shopping%20Centre!5e0!3m2!1sen!2sie!4v1714833004871!5m2!1sen!2sie" style="border:0; width: 100%; height: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+<!--End Google map area-->     
+
+<!--Start footer area-->  
+<footer class="footer-area">
+    <div class="container">
+        <div class="row">
+            <!--Start single footer widget-->
+            <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                <div class="single-footer-widget pd-bottom">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="images/footer/footer-logo.png" alt="Awesome Footer Logo">
+                        </a>
+                    </div>
+                    <div class="repairplus-info">
+                        <p class="top">Repairplus brings 41 years of Digital Repairs  experience right to your Device. Our Texhnicians are equipped to help you that work best.</p>
+                        <p>Our commitment to bring professionalism, good service & trust to the Phone repair service & maintenance business.</p>
+                        <p>We are a one-stop shop for all your repair needs. We are here to help you get your device back to working order.</p>
+                    </div>
+                </div>
+            </div>
+            <!--End single footer widget-->
+            <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                <div class="footer-widget">
+                    <div class="row">
+                        <!--Start single footer widget-->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="single-footer-widget">
+                                <div class="title">
+                                    <h3>Our Services</h3>
+                                </div>
+                                <ul class="services-list">
+                                    <li><a href="smartphone-repair.html">Smart Phone Repair</a></li>
+                                    <li><a href="tablet-repair.html">Tablets & iPad Repair</a></li>
+                                    <li><a href="desktop-repair.html">Desktop & Laptop</a></li>
+                                    <li><a href="game-repair.html">Game System Repair</a></li>
+                                    <li><a href="lcd-repair.html">LCD & LED TV Repair</a></li>
+                                    <li><a href="mp3-repair.html">MP3 & MP4 Player</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--Start single footer widget-->
+                        <!--Start single footer widget-->
+                        <div class="col-lg-5 col-md-4 col-sm-12">
+                            <div class="single-footer-widget subscribe-form-widget">
+                                <div class="title">
+                                    <h3>Subscribe US</h3>
+                                </div>
+                                <div class="subscribe-form">
+                                    <p>Subscribe to our newsletter!</p> 
+                                    <form action="#">
+                                        <input name="email" placeholder="Enter Your Email..." type="text">
+                                        <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                    </form>
+                                    <h4>We don’t do mail to spam and your mail id is confidential.</h4>
+                                </div>
+                                <div class="footer-social-links">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single footer widget-->
+                        <!--Start single footer widget-->
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="single-footer-widget contact-info-widget">
+                                <div class="title">
+                                    <h3>Contact Info</h3>
+                                </div>
+                                <ul class="footer-contact-info">
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-home-page"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h5><span>Unit 23D</span><br>Wilton Shopping Center, Co Cork</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-call-answer"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h5><span>Call Us</span><br>+353 087 2397 688</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-envelope"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h5><span>Mail Us</span><br>phonecampus.wilton@gmail.com</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-clock"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h5><span>Opening Time</span><br>Mon - Sat: 09.30am to 18.30pm</h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--End single footer widget-->
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!--Start footer botton-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer-bottom">
+                    <div class="copyright-text pull-left">
+                        <p>Copyrights © 2024</p> 
+                    </div>
+                    <div class="payment-method pull-right">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-paypal" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-discover" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--End footer botton-->
+    </div>
+</footer>   
+<!--End footer area--> 
+</body>
+</html>

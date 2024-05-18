@@ -1,0 +1,774 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IT Star Phone & Repair Shop</title>
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/resources/Logo.png" sizes="32x32">
+
+</head>
+
+<body>
+    <!--Three js lib-->
+    
+    <script type="module">
+        import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.127.0/build/three.module.js';
+        import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.127.0/examples/jsm/loaders/GLTFLoader.js';
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth * 0.5, window.innerHeight * 0.5);
+            document.getElementById('3d-holder').appendChild(renderer.domElement);
+    
+            const ambientLight = new THREE.AmbientLight(0x404040, 2);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            directionalLight.position.set(0, 1, 0);
+            scene.add(ambientLight);
+            scene.add(directionalLight);
+    
+            const loader = new GLTFLoader();
+            loader.load('../threejs/iphone_14_pro.glb', function (gltf) {
+                scene.add(gltf.scene);
+                gltf.scene.position.set(0, -1, 0);
+                gltf.scene.scale.set(2, 2, 2);
+            }, undefined, function (error) {
+                console.error(error);
+            });
+    
+            camera.position.z = 5;
+    
+            function animate() {
+                requestAnimationFrame(animate);
+                renderer.render(scene, camera);
+            }
+            animate();
+        });
+    </script>
+
+    <!--Start mainmenu area-->
+    <section class="mainmenu-area stricky">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <!--Start mainmenu-->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li style="width: 230px; border: none;"><img
+                                        style="margin-top: 15px; width: 200px; height: 40px"
+                                        src="images/resources/shop_name.png" alt="Logo"></li>
+                                <li class="current"><a href="index.html">Home</a></li>
+                                <li><a href="./shop.php">Products</a></li>
+                                <li><a href="./shopping-cart.html">Cart</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="./account.html">Account</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="top-search-box pull-right">
+                    <a href="./appointment.html"><button
+                            style="width: auto; padding-left: 6px; padding-right: 6px;">Book a Reapir</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End mainmenu area-->
+
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area">
+        <div class="container text-center">
+            <h1>Single Product</h1>
+        </div>
+    </section>
+    <!--End breadcrumb area-->
+
+    <!--Start breadcrumb bottom area-->
+    <section class="breadcrumb-botton-area">
+        <div class="container">
+            <div class="left pull-left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
+                    <li>Single Product</li>
+                </ul>
+            </div>
+            <div class="right pull-right">
+                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
+            </div>
+        </div>
+    </section>
+    <!--End breadcrumb bottom area-->
+
+    <!--Start blog area-->
+    <section id="shop-area" class="single-shop-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                    <!--Start single shop content-->
+                    <div class="single-shop-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div id="3d-holder">
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="content-box">
+                                    <h2 class="name">Bluetooth Device</h2>
+                                    <div class="review-box">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <span class="price">€19.99</span>
+                                    <div class="text">
+                                        <p>Working from home meant we couldsnack and coffee our breaks change our desks
+                                            or view, good, drink on the job, even spend the weather started getting
+                                            roughday in pajamas consequences.</p>
+                                    </div>
+                                    <div class="location-box">
+                                        <p>Check Delivery Option at Your Location:</p>
+                                        <form action="#">
+                                            <input type="text" placeholder="Pincode">
+                                            <button type="submit">Check</button><br />
+                                            <span>Expected Delivery in 4-10 Days</span>
+                                        </form>
+                                    </div>
+                                    <div class="addto-cart-box">
+                                        <!-- <input class="quantity-spinner" type="text" value="1" name="quantity"> -->
+                                        <button class="thm-btn bg-1 addtocart" type="submit" onclick="fn()">Add to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End single shop content-->
+                    <!--Start product tab box-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="product-tab-box">
+                                <ul class="nav nav-tabs tab-menu">
+                                    <li><a href="#desc" data-toggle="tab">Descriprion</a></li>
+                                    <li class="active"><a href="#review" data-toggle="tab">Reviews (2)</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="desc">
+                                        <div class="product-details-content">
+                                            <div class="desc-content-box">
+                                                <p>Bluetooth device reflects the design philosophy of form following
+                                                    function prevalent in modernism. These designs represent the ideals
+                                                    of cutting excess, practicality and an absence of decoration. These
+                                                    forms of lamps are visually light and follow minimalist principles
+                                                    of design which are influenced by architectural concepts like the
+                                                    cantilever.</p>
+                                                <p>Modern device fits best in open floor plans with clean lines that
+                                                    thrive in the absence of clutter. A one stop shop for home decor and
+                                                    furniture, Interior sells a home product every 30 seconds.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane active" id="review">
+                                        <div class="review-box">
+                                            <div class="sec-title-two">
+                                                <h3> &nbsp Reviews<p class="name pull-left"></p>
+                                                </h3>
+                                            </div>
+                                            <!--Start single review box-->
+                                            <div class="single-review-box">
+                                                <div class="img-holder">
+                                                    <img src="images/shop/review-1.jpg" alt="Awesome Image">
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="top">
+                                                        <div class="pull-left">
+                                                            <h4>Steven Rich – Feb 17, 2024:</h4>
+                                                        </div>
+                                                        <div class="review-box pull-right">
+                                                            <ul>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>How all this mistaken idea of denouncing pleasure and
+                                                            praising pain was born and I will give you a complete
+                                                            account of the system, and expound the actual teachings.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End single review box-->
+                                            <!--Start single review box-->
+                                            <div class="single-review-box">
+                                                <div class="img-holder">
+                                                    <img src="images/shop/review-2.jpg" alt="Awesome Image">
+                                                </div>
+                                                <div class="text-holder">
+                                                    <div class="top">
+                                                        <div class="pull-left">
+                                                            <h4>William Cobus – Dec 21, 2023:</h4>
+                                                        </div>
+                                                        <div class="review-box pull-right">
+                                                            <ul>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>there anyone who loves or pursues or desires to obtain pain
+                                                            itself, because it is pain, but because occasionally
+                                                            circumstances occur some great pleasure.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End single review box-->
+                                        </div>
+                                        <div class="review-form">
+                                            <div class="sec-title-two">
+                                                <h3>Add Your Comments</h3>
+                                            </div>
+                                            <div class="add-rating-box">
+                                                <div class="add-rating-title">
+                                                    <h4>Your Rating</h4>
+                                                </div>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <form action="#">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="field-label">
+                                                            <p>First Name*</p>
+                                                            <input type="text" name="fname" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="field-label">
+                                                            <p>Last Name*</p>
+                                                            <input type="text" name="lname" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="field-label">
+                                                            <p>Email*</p>
+                                                            <input type="text" name="email" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="field-label">
+                                                            <p>Your Comments*</p>
+                                                            <textarea name="review" placeholder=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <button class="thm-btn bg-1" type="submit">Submit Now</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End product tab box-->
+                    <!--Start related product box-->
+                    <div class="related-product">
+                        <div class="sec-title-two">
+                            <h3>Related Products</h3>
+                        </div>
+                        <div class="row">
+                            <!--Start single product item-->
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-product-item">
+                                    <div class="img-holder">
+                                        <img src="images/shop/hoco_headset.png" alt="Awesome Product Image">
+                                        <div class="overlay-box">
+                                            <div class="box">
+                                                <div class="content">
+                                                    <a class="thm-btn bg-1" href="shop-single.html">Add to Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-holder">
+                                        <div class="top clearfix">
+                                            <div class="product-title pull-left">
+                                                <a href="shop-single.html">
+                                                    <h5>TWS wireless headset</h5>
+                                                </a>
+                                            </div>
+                                            <div class="review-box pull-right">
+                                                <ul>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h4>€49.99</h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--End single product item-->
+                            <!--Start single product item-->
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-product-item">
+                                    <div class="img-holder">
+                                        <img src="images/shop/Hoco_HDMI.png" alt="Awesome Product Image">
+                                        <div class="overlay-box">
+                                            <div class="box">
+                                                <div class="content">
+                                                    <a class="thm-btn bg-1" href="shop-single.html">Add to Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-holder">
+                                        <div class="top clearfix">
+                                            <div class="product-title pull-left">
+                                                <a href="shop-single.html">
+                                                    <h5>Lightning to HDMI Adapter</h5>
+                                                </a>
+                                            </div>
+                                            <div class="review-box pull-right">
+                                                <ul>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h4>€19.99</h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--End single product item-->
+                            <!--Start single product item-->
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-product-item">
+                                    <div class="img-holder">
+                                        <img src="images/shop/Hoco_Adapter.png" alt="Awesome Product Image">
+                                        <div class="overlay-box">
+                                            <div class="box">
+                                                <div class="content">
+                                                    <a class="thm-btn bg-1" href="shop-single.html">Add to Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-holder">
+                                        <div class="top clearfix">
+                                            <div class="product-title pull-left">
+                                                <a href="shop-single.html">
+                                                    <h5>Lightning/USB-C Adapter</h5>
+                                                </a>
+                                            </div>
+                                            <div class="review-box pull-right">
+                                                <ul>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h4>€9.99</h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--End single product item-->
+                        </div>
+                    </div>
+                    <!--End related product box-->
+                </div>
+                <!--Start sidebar Wrapper-->
+                <div class="col-lg-3 col-md-4 col-sm-7 col-xs-12">
+                    <div class="sidebar-wrapper">
+                        <!--Start single sidebar-->
+                        <div class="single-sidebar">
+                            <form class="search-form" action="#">
+                                <input placeholder="Search..." type="text">
+                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                        <!--End single sidebar-->
+                        <!--Start single sidebar-->
+                        <div class="single-sidebar">
+                            <div class="sidebar-title">
+                                <h1>Categories</h1>
+                            </div>
+                            <ul class="categories clearfix">
+                                <li>
+                                    <a href="#">
+                                        Smart Phones
+                                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Desktop & Mac
+                                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Game Console
+                                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Safety & Security
+                                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Uncategorized
+                                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--End single sidebar-->
+                        <!--Start single sidebar-->
+                        <div class="single-sidebar">
+                            <div class="sidebar-title">
+                                <h1>Filter By Price</h1>
+                            </div>
+                            <div class="price-ranger">
+                                <div id="slider-range"></div>
+                                <div class="ranger-min-max-block">
+                                    <input class="thm-btn bg-1" type="submit" value="Filter">
+                                    <span>Price:</span>
+                                    <input type="text" readonly class="min">
+                                    <span>-</span>
+                                    <input type="text" readonly class="max">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--End single sidebar-->
+                        <!--Start single sidebar-->
+                        <div class="single-sidebar">
+                            <div class="sidebar-title">
+                                <h1>Latest Products</h1>
+                            </div>
+                            <ul class="latest-product">
+                                <li>
+                                    <div class="img-holder">
+                                        <img src="images/shop/hoco_speaker.png" alt="Awesome Image">
+                                        <div class="overlay">
+                                            <div class="box">
+                                                <div class="content">
+                                                    <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-holder">
+                                        <a href="#">
+                                            <h4>SPORTS PORTABLE LOUDSPEAKER</h4>
+                                        </a>
+                                        <h5>€34.99</h5>
+                                        <div class="review-box">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-holder">
+                                        <img src="images/shop/ipad_pro_12.9.png" alt="Awesome Image">
+                                        <div class="overlay">
+                                            <div class="box">
+                                                <div class="content">
+                                                    <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-holder">
+                                        <a href="#">
+                                            <h4>Ipad Pro 6(2022)</h4>
+                                        </a>
+                                        <h5>€1399.99</h5>
+                                        <div class="review-box">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-holder">
+                                        <img src="images/shop/ipad_air_5th.png" alt="Awesome Image">
+                                        <div class="overlay">
+                                            <div class="box">
+                                                <div class="content">
+                                                    <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-holder">
+                                        <a href="#">
+                                            <h4>Ipad Air 5</h4>
+                                        </a>
+                                        <h5>€749.99</h5>
+                                        <div class="review-box">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--End single sidebar-->
+                    </div>
+                </div>
+                <!--End Sidebar Wrapper-->
+            </div>
+        </div>
+    </section>
+    <!--End blog area-->
+
+
+    <!--Start footer area-->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <!--Start single footer widget-->
+                <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                    <div class="single-footer-widget pd-bottom">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="images/footer/footer-logo.png" alt="Awesome Footer Logo">
+                            </a>
+                        </div>
+                        <div class="repairplus-info">
+                            <p class="top">Repairplus brings 41 years of Digital Repairs experience right to your
+                                Device. Our Texhnicians are equipped to help you that work best.</p>
+                            <p>Our commitment to bring professionalism, good service & trust to the Phone repair service
+                                & maintenance business.</p>
+                            <p>We are a one-stop shop for all your repair needs. We are here to help you get your device
+                                back to working order.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single footer widget-->
+                <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                    <div class="footer-widget">
+                        <div class="row">
+                            <!--Start single footer widget-->
+                            <div class="col-lg-3 col-md-4 col-sm-12">
+                                <div class="single-footer-widget">
+                                    <div class="title">
+                                        <h3>Our Services</h3>
+                                    </div>
+                                    <ul class="services-list">
+                                        <li><a href="smartphone-repair.html">Smart Phone Repair</a></li>
+                                        <li><a href="tablet-repair.html">Tablets & iPad Repair</a></li>
+                                        <li><a href="desktop-repair.html">Desktop & Laptop</a></li>
+                                        <li><a href="game-repair.html">Game System Repair</a></li>
+                                        <li><a href="lcd-repair.html">LCD & LED TV Repair</a></li>
+                                        <li><a href="mp3-repair.html">MP3 & MP4 Player</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--Start single footer widget-->
+                            <!--Start single footer widget-->
+                            <div class="col-lg-5 col-md-4 col-sm-12">
+                                <div class="single-footer-widget subscribe-form-widget">
+                                    <div class="title">
+                                        <h3>Subscribe US</h3>
+                                    </div>
+                                    <div class="subscribe-form">
+                                        <p>Subscribe to our newsletter!</p>
+                                        <form action="#">
+                                            <input name="email" placeholder="Enter Your Email..." type="text">
+                                            <button type="submit"><i class="fa fa-paper-plane"
+                                                    aria-hidden="true"></i></button>
+                                        </form>
+                                        <h4>We don’t do mail to spam and your mail id is confidential.</h4>
+                                    </div>
+                                    <div class="footer-social-links">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End single footer widget-->
+                            <!--Start single footer widget-->
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="single-footer-widget contact-info-widget">
+                                    <div class="title">
+                                        <h3>Contact Info</h3>
+                                    </div>
+                                    <ul class="footer-contact-info">
+                                        <li>
+                                            <div class="icon-holder">
+                                                <span class="flaticon-home-page"></span>
+                                            </div>
+                                            <div class="text-holder">
+                                                <h5><span>Unit 23D</span><br>Wilton Shopping Center, Co Cork</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-holder">
+                                                <span class="flaticon-call-answer"></span>
+                                            </div>
+                                            <div class="text-holder">
+                                                <h5><span>Call Us</span><br>+353 087 2397 688</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-holder">
+                                                <span class="flaticon-envelope"></span>
+                                            </div>
+                                            <div class="text-holder">
+                                                <h5><span>Mail Us</span><br>phonecampus.wilton@gmail.com</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-holder">
+                                                <span class="flaticon-clock"></span>
+                                            </div>
+                                            <div class="text-holder">
+                                                <h5><span>Opening Time</span><br>Mon - Sat: 09.30am to 18.30pm</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--End single footer widget-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Start footer botton-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-bottom">
+                        <div class="copyright-text pull-left">
+                            <p>Copyrights © 2024</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End footer botton-->
+        </div>
+    </footer>
+    <!--End footer area-->
+
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+</body>
+
+</html>
